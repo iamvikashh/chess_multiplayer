@@ -1,8 +1,10 @@
 import { socket } from "../connection/socket"
+import React from 'react'
+import { useParams } from 'react-router-dom'
 
-const joinGameRoom =(gameId,userName,isCreator)=>{
+const JoinGameRoom =(gameId,userName,isCreator)=>{
     const idData = {
-        gameId : gameid,
+        gameId : gameId,
         userName : userName,
         isCreator: isCreator
     }

@@ -1,9 +1,8 @@
 import io from  'socket.io-client'
-import url from 'socket.io-client/lib/url'
 
 const URL ='http://localhost:8000'
 
-const socket = io(url)
+const socket = io(URL)
 
 var mySocketId
 

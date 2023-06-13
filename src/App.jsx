@@ -45,7 +45,7 @@ function App() {
   }, [])
 
   const [userName, setUserName] = React.useState('')
-
+  console.log("hi hello")
   return (
     <ColorContext.Provider value = {{didRedirect: didRedirect, playerDidRedirect: playerDidRedirect, playerDidNotRedirect: playerDidNotRedirect}}>
       <Router>

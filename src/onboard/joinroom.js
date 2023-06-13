@@ -29,7 +29,7 @@ class JoinRoom extends React.Component {
     }
 
     render() {
-    
+       console.log("join room")
         return (<React.Fragment>
             {
                 this.state.didGetUserName ? 
