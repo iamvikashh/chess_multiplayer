@@ -11,7 +11,7 @@ import piecemap from './piecemap'
 
 class ChessGame extends React.Component{
     state={
-        gameState:new Game(false),
+        gameState:new Game(this.props.color),
         ddraggedPieceTargetId: "", // empty string means no piece is being dragged
         playerTurnToMoveIsWhite: true,
         whiteKingInCheck: false, 
