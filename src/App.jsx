@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import JoinRoom from './onboard/joinroom'
-import { ColorContext } from './context/colorcontext'
+import  {configContext}  from './context/configContext'
 import Onboard from './onboard/onboard'
 import JoinGame from './onboard/joinGame'
 import ChessGame from './chess/ui/chessgame'
@@ -47,7 +47,7 @@ function App() {
   const [userName, setUserName] = React.useState('')
   console.log("hi hello")
   return (
-    <ColorContext.Provider value = {{didRedirect: didRedirect, playerDidRedirect: playerDidRedirect, playerDidNotRedirect: playerDidNotRedirect}}>
+    <configContext.Provider value = {{didRedirect: didRedirect, playerDidRedirect: playerDidRedirect, playerDidNotRedirect: playerDidNotRedirect}}>
       <Router>
         <Switch>
           <Route path = "/" exact>
@@ -65,7 +65,7 @@ function App() {
           <Redirect to = "/" />
         </Switch>
       </Router>
-    </ColorContext.Provider>);
+    </configContext.Provider>);
 }
 
 export default App;

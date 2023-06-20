@@ -19,7 +19,7 @@ const Piece = (props) => {
     return <Image image={image}
          x = {props.x - 90}
          y = {props.y - 90}
-         draggable = {canThisPieceEvenBeMovedByThisPlayer && isItThatPlayersTurn}
+         draggable = {true}
          width = {isDragged ? 75 : 60}
          height = {isDragged ? 75 : 60}
          onDragStart = {props.onDragStart}

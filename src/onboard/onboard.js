@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import uuid from 'uuid/v4'
-import { ColorContext } from '../context/colorcontext' 
+import  {configContext}  from '../context/configContext' 
 const socket  = require('../connection/socket').socket
 
 /**
@@ -85,7 +85,7 @@ class CreateNewGame extends React.Component {
 }
 
 const Onboard = (props) => {
-    const color = React.useContext(ColorContext)
+    const color = React.useContext(configContext)
 
     return <CreateNewGame didRedirect = {color.playerDidRedirect} setUserName = {props.setUserName}/>
 }
