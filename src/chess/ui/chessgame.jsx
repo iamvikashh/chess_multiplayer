@@ -8,6 +8,8 @@ import piecemap from './piecemap'
 import {configContext} from '../../context/configContext'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import useSound from 'use-sound'
+import VideoChatApp from '../../connection/videochat'
+
 //import chessMove from '../assets/moveSoundEffect.mp3'
 const socket  = require('../../connection/socket').socket
 
@@ -298,6 +300,12 @@ const ChessGameWrapper =(props)=>{
                 gameId = {gameid}
                 isWhite = {config.didRedirect}
                  />
+                 <VideoChatApp
+                mySocketId={socket.id}
+                opponentSocketId={opponentSocketId}
+                myUserName={props.myUserName}
+                opponentUserName={opponentUserName}
+              />
             </div>
             <h4> You: {props.myUserName} </h4>
         </div>

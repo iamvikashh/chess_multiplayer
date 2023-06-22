@@ -12,14 +12,17 @@ const Piece = (props) => {
 
     const thisWhiteKingInCheck = props.id === "wk1" && props.whiteKingInCheck
     const thisBlackKingInCheck = props.id === "bk1" && props.blackKingInCheck
+   
+     
+     console.log("isWhite--> " + props.isWhite)
+     console.log("is this white move--> "+props.playerTurnToMoveIsWhite)
+     console.log("isItThatPlayersTurn ->" + isItThatPlayersTurn)
+     console.log("canThisPieceEvenBeMovedByThisPlayer->" + canThisPieceEvenBeMovedByThisPlayer)
 
-
-    // console.log("this piece ID:" + props.thisPieceTargetId)
-    // console.log("dragged piece ID:" + props.draggedPieceTargetId)
     return <Image image={image}
          x = {props.x - 90}
          y = {props.y - 90}
-         draggable = {true}
+         draggable = {props.playerTurnToMoveIsWhite || props.isWhite}
          width = {isDragged ? 75 : 60}
          height = {isDragged ? 75 : 60}
          onDragStart = {props.onDragStart}
